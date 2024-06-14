@@ -35,7 +35,7 @@ $H_A$: CAPPUN id dependent of OWNGUN
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 CAPPUN is a categorical variable,  
 OWNGUN is a categorical variable,   
-so Iuse the cat~cat helper file
+so I use the cat~cat helper file
 
 ## Results
 
@@ -52,7 +52,10 @@ barchartGC(~CAPPUN + OWNGUN,data=GSSdata, type="percent")
 ```
 
 
-This graph shows that 
+This graph shows that almost twice as much people who do not own guns are more likely to oppose capital punishment. People who own guns are about 50/50 in being favor and opposed of capital punishment.
+
+
+
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
@@ -60,24 +63,34 @@ This graph shows that
 
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
-
-
 ```{r}
 table1 <- xtabs(~CAPPUN + OWNGUN, data=GSSdata)
 rowPerc(table1)
 colPerc(table1)
 ```
 
-This table shows 
+This table shows that people who don't own guns are are about 20% more opposed to capital punishment then people who own guns.  
+The table also shows being in favor and opposed to capital punishment while owning a gun is about a 10% difference.
 
 ### Inferential Results
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+This p-value for the Chi-squared test was p=0.02002  
+This means we fail to reject the null hypothesis and conclude that the opinion on capital punishment (CAPPUN) is dependent on gun ownership (OWNGUN)
+
+The p-value for fisher exact test was p=0.01651, and the odds ratio was 2.271.
+So the odds ratio, 2.271:1 means that the people who do not own a gun are 2.271 times more likely to oppose capital punishment.
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
 #  Question 2
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
-
+num~cat voted yes or no based on numbers of education 
 Is there a difference in years of education (EDUC) between the those who did or did not vote in 2012 (VOTE12)?
 
 ## Methods
