@@ -148,7 +148,14 @@ We conclude that the number of education is dependent of those who did/didn't vo
 
 Determine if a persons performance on the wordsum test (WORDSUM) is independent of their level of schooling (DEGREE).
 
+$H_0$: Performance on the wordsum test (WORDSUM) is independent of level of schooling (DEGREE)  
+
+$H_A$: Performance on the wordsum test (WORDSUM) is dependent of level of schooling (DEGREE)   
+
 ## Methods
+WORDSUM is a numerical variable  
+DEGREE is categorical variable  
+So I use the Num~cat helper file  
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
@@ -159,6 +166,11 @@ Determine if a persons performance on the wordsum test (WORDSUM) is independent 
 ### Descriptive Results
 
 #### Graphical Descriptive Results
+
+```{r}
+plot(WORDSUM~DEGREE,data=GSSdata)
+```
+
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
