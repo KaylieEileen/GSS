@@ -159,7 +159,7 @@ So I use the Num~cat helper file
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
-##Results
+## Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
 
@@ -171,6 +171,7 @@ So I use the Num~cat helper file
 plot(WORDSUM~DEGREE,data=GSSdata)
 ```
 
+This boxplot shows that people who are Graduates have a higher score on their wordsum test (WORDSUM) than people who are in High School and Junior College.  
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
