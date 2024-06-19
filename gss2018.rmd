@@ -96,9 +96,9 @@ This means we reject the null hypothesis and conclude that the opinion on capita
 num~cat voted yes or no based on numbers of education 
 Is there a difference in years of education (EDUC) between the those who did or did not vote in 2012 (VOTE12)?
 
-$H_0$: Number of education is independent of those who did/didn't vote in 2012
+$H_0$: There is a difference of Number of education of those who did/didn't vote in 2012
 
-$H_A$: Number of education is dependent of those who did/didn't vote in 2012
+$H_A$: There is no difference of Number of education of those who did/didn't vote in 2012
 
 ## Methods
 
@@ -129,7 +129,7 @@ The boxplot shows that people who voted in 2012 have a higher education than peo
 favstats(EDUC~VOTE12,data=GSSdata)
 ```
 
-The table shows that the median for people who voted in 2012 is 16 whereas the median for people who didn't vote is 13. 
+The table shows that the mean of years of education for people who voted in 2012 is 15.7 whereas the mean of of years education for people who didn't vote is 13.4.
 
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
@@ -151,9 +151,9 @@ We conclude that the number of education is dependent of those who did/didn't vo
 
 Determine if a persons performance on the wordsum test (WORDSUM) is independent of their level of schooling (DEGREE).
 
-$H_0$: Performance on the wordsum test (WORDSUM) is independent of level of schooling (DEGREE)  
+$H_0$: Person's score on the wordsum test (WORDSUM) is independent of level of schooling (DEGREE)  
 
-$H_A$: Performance on the wordsum test (WORDSUM) is dependent of level of schooling (DEGREE)   
+$H_A$: Person's score on the wordsum test (WORDSUM) is dependent of level of schooling (DEGREE)   
 
 ## Methods
 WORDSUM is a numerical variable  
@@ -185,12 +185,24 @@ This boxplot shows that people who are Graduates have a higher score on their wo
 favstats(WORDSUM~DEGREE,data=GSSdata)
 ```
 
-This numerical summary shows the median of of Wordsum test scores between the years of education.  
-It shows that Graduates have a median of 10 which is the highest between the degrees.   
+This numerical summary shows the mean of Wordsum test scores between the years of education.    
+It shows that Graduates have a mean of 9.5 which is the highest between the degrees.   
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ### Inferential Results
+```{r}
+anova=aov(WORDSUM~DEGREE,data= GSSdata)
+summary(anova)
+```  
+
+This shows that we reject the null hypothesis because the p-value is 0.0000002 which is less than 0.05.
+
+
+```{r}
+par(mar = c(3, 8.7, 2, 2))
+plot(TukeyHSD(anova),las=2)
+```
 
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
@@ -200,3 +212,5 @@ It shows that Graduates have a median of 10 which is the highest between the deg
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 
+#### Question 1: Is gun onwership independent of opinion on capital punishment.   
+The summary resulta and the inferential results show that they are dependent. 
