@@ -68,8 +68,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-This table shows that people opposed to CAPPUN and don't own guns is 70.97%.  People who are in favor of CAPPUN and own gun is 48.28%.
-People who are opposed to CAPPUN and own guns is 29.03% and people in favor to CAPPUN and don't own guns is 51.72%.
+The numerical summary shows that 75% of gun owners favor CAPPUN. 25% of gun owners oppose CAPPUN.   
 
 
 ### Inferential Results
@@ -79,12 +78,13 @@ chisq.test(table1)
 chisqtestGC(table1)
 fisher.test(table1)
 ```
-This p-value for the Chi-squared test was p=0.02002  
-The p-value for fisher exact test was p=0.01651,which is also less than 0.05.  
 
-The odds ration was 2.271. So the odds ratio, 2.271:1 means that the people who do not own a gun are 2.271 times more likely to oppose capital punishment.  
+This p-value for the Chi-squared test is p=0.02002.   
+The p-value for fisher exact test was p=0.01651,which is also less than 0.05. 
 
-This means we reject the null hypothesis and conclude that the opinion on capital punishment (CAPPUN) is dependent on gun ownership (OWNGUN) because the p-value is less than 0.05.  
+The odds ratio says that gun owners are 2.271 times more likely to favor capital punishment than those who don't own a gun.  
+
+This means we reject the null hypothesis and conclude that the opinion on capital punishment (CAPPUN) is dependent on gun ownership (OWNGUN) because both p-value's are less than 0.05.    
 
 
 
