@@ -46,13 +46,12 @@ so I use the cat~cat helper file
 #### Graphical Descriptive Results
 
 ```{r}
-barchartGC(~CAPPUN + OWNGUN,data=GSSdata)
-barchartGC(~CAPPUN + OWNGUN,data=GSSdata, type="percent")
+barchartGC(~OWNGUN + CAPPUN,data=GSSdata)
+barchartGC(~OWNGUN + CAPPUN,data=GSSdata, type="percent")
 
 ```
 
-
-This graph shows that almost twice as much people who do not own guns are more likely to oppose capital punishment. People who own guns are about 50/50 in being favor and opposed of capital punishment.
+This graph shows that people who own a gun are more likely to favor capital punishment.     
 
 
 
@@ -69,8 +68,9 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-This table shows that people who don't own guns are are about 20% more opposed to capital punishment then people who own guns.  
-The table also shows being in favor and opposed to capital punishment while owning a gun is about a 10% difference.
+This table shows that people opposed to CAPPUN and don't own guns is 70.97%.  People who are in favor of CAPPUN and own gun is 48.28%.
+People who are opposed to CAPPUN and own guns is 29.03% and people in favor to CAPPUN and don't own guns is 51.72%.
+
 
 ### Inferential Results
 
@@ -80,10 +80,13 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 This p-value for the Chi-squared test was p=0.02002  
-This means we fail to reject the null hypothesis and conclude that the opinion on capital punishment (CAPPUN) is dependent on gun ownership (OWNGUN)
+The p-value for fisher exact test was p=0.01651,which is also less than 0.05.  
 
-The p-value for fisher exact test was p=0.01651, and the odds ratio was 2.271.
-So the odds ratio, 2.271:1 means that the people who do not own a gun are 2.271 times more likely to oppose capital punishment.
+The odds ration was 2.271. So the odds ratio, 2.271:1 means that the people who do not own a gun are 2.271 times more likely to oppose capital punishment.  
+
+This means we reject the null hypothesis and conclude that the opinion on capital punishment (CAPPUN) is dependent on gun ownership (OWNGUN) because the p-value is less than 0.05.  
+
+
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
