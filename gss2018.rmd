@@ -219,10 +219,11 @@ No difference between bachelors and graduates.
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 
-#### Question 1: Is gun onwership independent of opinion on capital punishment.   
-The summary resulta and the inferential results show that they are dependent. 
+#### Question 1: Is gun onwership independent of opinion on capital punishment? 
+The summary result and the inferential results show that they are dependent. 
 
-#### Question 2:
+#### Question 2: Is there a difference in years of education between the those who did or did not vote in 2012?
+The summary result and inferential results show that they are not independent.
 
-
-#### Question 3: Is a persons performance on the wordsum test (WORDSUM) independent of their level of schooling (DEGREE)
+#### Question 3: Is a persons performance on the wordsum test independent of their level of schooling?
+The summary and inferential results show that they are dependent. 
