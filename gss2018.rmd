@@ -200,10 +200,17 @@ This shows that we reject the null hypothesis because the p-value is 0.0000002 w
 
 
 ```{r}
-par(mar = c(3, 8.7, 2, 2))
+par(mar = c(7, 8.7, 2, 2))
 plot(TukeyHSD(anova),las=2)
 ```
 
+The tukey test shows that there is no difference between high school and less than high school.  
+There is a difference between junior c ollege and high school.  
+There is a difference between bachelors degree and high school.   
+There is a difference between graduate and high school.   
+No difference between high school and graduate.    
+No difference between junior college and graduate.  
+No difference between bachelors and graduates.  
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
@@ -214,3 +221,8 @@ plot(TukeyHSD(anova),las=2)
 
 #### Question 1: Is gun onwership independent of opinion on capital punishment.   
 The summary resulta and the inferential results show that they are dependent. 
+
+#### Question 2:
+
+
+#### Question 3: Is a persons performance on the wordsum test (WORDSUM) independent of their level of schooling (DEGREE)
