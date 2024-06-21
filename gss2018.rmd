@@ -104,8 +104,8 @@ $H_A$: There is no difference of Number of education of those who did/didn't vot
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
-EDUC is numerical variable
-VOTE12 is categorical variable
+EDUC is numerical variable  
+VOTE12 is categorical variable  
 So I use the num~cat helper file
 
 ## Results
