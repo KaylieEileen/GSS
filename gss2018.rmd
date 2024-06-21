@@ -93,7 +93,6 @@ This means we reject the null hypothesis and conclude that the opinion on capita
 #  Question 2
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
-num~cat voted yes or no based on numbers of education 
 Is there a difference in years of education (EDUC) between the those who did or did not vote in 2012 (VOTE12)?
 
 $H_0$: There is a difference of Number of education of those who did/didn't vote in 2012
@@ -141,7 +140,7 @@ t.test(EDUC~VOTE12,data=GSSdata)
 
 The t-test shows that the p-value is 0.0000001248.  
 This means we reject the null hypothesis that education (EDUC) is independent of those who did/didn't vote in 2012 (VOTE12) because the p-value is smaller than 0.05.   
-We conclude that the number of education is dependent of those who did/didn't vote in 2012 because those who did vote have a higher education compared to those who didn't vote.
+Between those who did/didn't vote in 2012, we conclude that it is dependent on the number of years of education.   
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
@@ -149,7 +148,7 @@ We conclude that the number of education is dependent of those who did/didn't vo
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
 
-Determine if a persons performance on the wordsum test (WORDSUM) is independent of their level of schooling (DEGREE).
+Determine if a person's performance on the wordsum test (WORDSUM) is independent of their level of schooling (DEGREE).
 
 $H_0$: Person's score on the wordsum test (WORDSUM) is independent of level of schooling (DEGREE)  
 
@@ -174,7 +173,7 @@ So I use the Num~cat helper file
 plot(WORDSUM~DEGREE,data=GSSdata)
 ```
 
-This boxplot shows that people who are Graduates have a higher score on their wordsum test (WORDSUM) than people with fewer education.  
+This boxplot shows that people who are Graduates have a tendency of having a higher score on their wordsum test (WORDSUM) than people with fewer years of education.  
 
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
@@ -186,7 +185,7 @@ favstats(WORDSUM~DEGREE,data=GSSdata)
 ```
 
 This numerical summary shows the mean of Wordsum test scores between the years of education.    
-It shows that Graduates have a mean of 9.5 which is the highest between the degrees.   
+It shows that Graduates have a mean of 9.5 which is the highest among the degrees.   
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
@@ -219,10 +218,10 @@ No difference between bachelors and graduates.
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 
 #### Question 1: Is gun onwership independent of opinion on capital punishment? 
-The summary result and the inferential results show that they are dependent. 
+The summary result and the inferential results show that they are dependent. We conclude that the opinion on capital punishment is dependent on gun ownership
 
 #### Question 2: Is there a difference in years of education between the those who did or did not vote in 2012?
-The summary result and inferential results show that they are not independent.
+The summary result and inferential results show that they are not independent. Between those who did/didn't vote in 2012, we conclude that it is dependent on the number of years of education.
 
 #### Question 3: Is a persons performance on the wordsum test independent of their level of schooling?
-The summary and inferential results show that they are dependent. 
+The summary and inferential results show that they are dependent. People who are Graduates have a tendency of having a higher score on their wordsum test than people with fewer years of education.
