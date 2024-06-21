@@ -207,7 +207,6 @@ plot(TukeyHSD(anova),las=2)
 The tukey test shows that there is no difference between high school and less than high school.  
 There is a difference between junior c ollege and high school.  
 There is a difference between bachelors degree and high school.   
-There is a difference between graduate and high school.   
 No difference between high school and graduate.    
 No difference between junior college and graduate.  
 No difference between bachelors and graduates.  
